@@ -1,0 +1,48 @@
+{
+  "name": "tortil",
+  "version": "0.0.0",
+  "description": "Tor Utils",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "author": {
+    "name": "Roman Masyhar",
+    "email": "mhrohman@live.com"
+  },
+  "scripts": {
+    "test": "jest --forceExit"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.json"
+      }
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "./node_modules/ts-jest/preprocessor.js"
+    },
+    "testMatch": [
+      "**/test/**/*.(ts|js)",
+      "**/__test__/**/*.(ts|js)"
+    ],
+    "testEnvironment": "node"
+  },
+  "devDependencies": {
+    "@types/execa": "^0.7.0",
+    "@types/is-ip": "^2.0.0",
+    "@types/jest": "^20.0.7",
+    "@types/node": "^8.0.24",
+    "is-ip": "^2.0.0",
+    "jest": "^20.0.4",
+    "ts-jest": "^20.0.10",
+    "tslint": "^5.6.0",
+    "tslint-config-standard": "^6.0.1",
+    "typescript": "^2.4.2"
+  },
+  "dependencies": {
+    "execa": "^0.8.0"
+  }
+}
