@@ -5,7 +5,6 @@ export type TorrcConfig = {
 }
 
 export type TortilConfig = {
-  cmd?: string
   protocol?: string
   host?: string
   port?: number
@@ -15,8 +14,6 @@ export type TortilConfig = {
 
 export interface ITortil {
   options?: TortilConfig
-  restart (): void
-  start (): void
-  stop (): void
   getIP (): Promise<string>
+  renewIP (): Promise<string|void>
 }

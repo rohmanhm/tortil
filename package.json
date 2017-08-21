@@ -1,9 +1,10 @@
 {
   "name": "tortil",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Tor Utils",
   "license": "MIT",
-  "main": "lib/index.js",
+  "main": "./lib/index.js",
+  "typings": "./lib/index.d.ts",
   "author": {
     "name": "Roman Masyhar",
     "email": "mhrohman@live.com"

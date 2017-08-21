@@ -1,15 +1,10 @@
-import { ChildProcess } from 'child_process'
 import * as execa from 'execa'
+
 import defaultConfig from './config'
-import {
-  ITortil,
-  TortilConfig,
-  TorrcConfig
-} from './types'
+import { ITortil, TortilConfig, TorrcConfig } from '../typings/tortil'
 
 class Tortil implements ITortil {
   public config: TortilConfig
-  public tor: ChildProcess
 
   constructor (options?: TortilConfig) {
     this.config = Object.assign({}, defaultConfig, options)
@@ -23,25 +18,18 @@ class Tortil implements ITortil {
     ])
   }
 
-  public renewIP () {
-    return
-  }
+  public async renewIP () {
+    if (this.config.torrc) {
+      const auth = `AUTHENTICATE \"${this.config.torrc.password}\"\r\nsignal NEWNYM\r\nQUIT`
+      const stream = execa('nc', [
+        '-v',
+        `${this.config.torrc.host}`,
+        `${this.config.torrc.port}`
+      ]).stdin
+      stream.write(auth)
 
-  public start () {
-    if (this.config.cmd) {
-      this.tor = execa(this.config.cmd)
+      return await this.getIP()
     }
-  }
-
-  public stop () {
-    if (this.config.cmd) {
-      this.tor.kill()
-    }
-  }
-
-  public restart () {
-    this.stop()
-    this.start()
   }
 }
 
