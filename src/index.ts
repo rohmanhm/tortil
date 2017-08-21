@@ -1,11 +1,8 @@
 import { ChildProcess } from 'child_process'
 import * as execa from 'execa'
 import defaultConfig from './config'
-import {
-  ITortil,
-  TortilConfig,
-  TorrcConfig
-} from './types'
+
+import { ITortil, TortilConfig, TorrcConfig } from '../typings/tortil'
 
 class Tortil implements ITortil {
   public config: TortilConfig

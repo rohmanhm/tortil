@@ -1,6 +1,6 @@
 /// <reference types="node" />
 import { ChildProcess } from 'child_process';
-import { ITortil, TortilConfig } from './types';
+import { ITortil, TortilConfig } from '../typings/tortil';
 declare class Tortil implements ITortil {
     config: TortilConfig;
     tor: ChildProcess;

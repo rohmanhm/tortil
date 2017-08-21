@@ -1,4 +1,4 @@
-import { TortilConfig } from './types'
+import { TortilConfig } from '../typings/tortil'
 
 const defaultConfig: TortilConfig = {
   cmd: 'tor',
