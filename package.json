@@ -4,6 +4,7 @@
   "description": "Tor Utils",
   "license": "MIT",
   "main": "./lib/index.js",
+  "typings": "./lib/index.d.ts",
   "author": {
     "name": "Roman Masyhar",
     "email": "mhrohman@live.com"
