@@ -32,7 +32,7 @@
     "testEnvironment": "node"
   },
   "devDependencies": {
-    "@types/execa": "^0.7.0",
+    "@types/execa": "^0.8.0",
     "@types/is-ip": "^2.0.0",
     "@types/jest": "^21.1.0",
     "@types/node": "^8.0.24",
