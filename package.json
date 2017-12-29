@@ -34,7 +34,7 @@
   "devDependencies": {
     "@types/execa": "^0.8.0",
     "@types/is-ip": "^2.0.0",
-    "@types/jest": "^21.1.0",
+    "@types/jest": "^22.0.0",
     "@types/node": "^8.0.24",
     "is-ip": "^2.0.0",
     "jest": "^22.0.0",
