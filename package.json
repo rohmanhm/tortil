@@ -35,7 +35,7 @@
     "@types/execa": "^0.9.0",
     "@types/is-ip": "^2.0.0",
     "@types/jest": "^23.0.0",
-    "@types/node": "^10.0.3",
+    "@types/node": "^10.10.1",
     "is-ip": "^2.0.0",
     "jest": "^22.0.0",
     "ts-jest": "^23.0.0",
